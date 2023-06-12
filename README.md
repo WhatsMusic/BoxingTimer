@@ -1,3 +1,7 @@
+<img align="right" width="50" height="50" src="img/syntaxLogo.png">
+
+### Batch08: Grundlagen der Programmierung<p align="right">
+
 # BoxingTimer
 
 ## Überblick
