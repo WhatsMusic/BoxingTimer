@@ -10,6 +10,8 @@ Das BoxingTimer-Projekt ist eine Anwendung, die Trainingspläne für Boxübungen
 
 ## Hauptklassen
 
+<img src="img/BoxingTimer_KlassenDiagramm.png">
+
 ### BoxingTimer
 
 Diese Klasse stellt das Hauptelement der Anwendung dar. Sie enthält eine Liste von `TrainingPlan`-Instanzen, aus der Benutzer einen Plan zur Durchführung auswählen können.
