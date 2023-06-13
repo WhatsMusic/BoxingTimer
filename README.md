@@ -1,8 +1,12 @@
+
+
 # BoxingTimer
 
 This project contains a Boxing Timer application with various levels and exercises. 
 
 ## Classes
+
+<img src="img/BoxingTimer_KlassenDiagramm.png">
 
 ### BoxingTimer
 
