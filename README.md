@@ -1,62 +1,66 @@
 <img align="right" width="50" height="50" src="img/syntaxLogo.png">
 
-# BoxingTimer
+## # BoxingTimer
 
-This project contains a Boxing Timer application with various levels and exercises. 
+Dieses Projekt enthält eine Boxing Timer-Anwendung mit verschiedenen Übungen und Schwierigkeitsgraden.
 
-## Classes
+## Hauptklassen
 
 <img src="img/Klassendiagramm.png" alt="BoxingTimer Klassendiagramm">
 
 ### BoxingTimer
 
-BoxingTimer class manages a list of training plans.
+Die Klasse BoxingTimer verwaltet eine Liste von Trainingsplänen. Jeder dieser Pläne kann ausgewählt und ausgeführt werden.
 
-- **Properties**:
-  - `trainingPlans`: List of `TrainingPlan`
-- **Methods**:
-  - `selectTrainingplan(plan: TrainingPlan)`: Selects a particular training plan.
+- **Eigenschaften**:
+  - `trainingPlans`: Eine Liste der zur Verfügung stehenden Trainingspläne.
+- **Methoden**:
+  - `selectTrainingplan(plan: TrainingPlan)`: Diese Methode ermöglicht die Auswahl eines bestimmten Trainingsplans aus der Liste der verfügbaren Pläne.
 
 ### TrainingPlan
 
-TrainingPlan class represents a training plan, which consists of a list of exercises.
+Die Klasse TrainingPlan repräsentiert einen Trainingsplan, der aus einer Liste von Übungen besteht. Jeder Trainingsplan hat einen Namen, einen Schwierigkeitsgrad und speichert die Gesamtdauer sowie die Anzahl der Übungen.
 
-- **Properties**:
-  - `name`: String
-  - `exercises`: List of `Exercise`
-  - `totalDuration`: Int
-  - `numExercises`: Int
-- **Methods**:
-  - `setName(name: String)`: Sets the name of the training plan.
-  - `addExercise(exercise: Exercise)`: Adds an exercise to the plan.
-  - `delExercise(exercise: Exercise)`: Removes an exercise from the plan.
-  - `startPlan()`: Runs through each exercise in `exercises`, starts a timer based on the duration of the exercise, and prints corresponding hints in the console.
-  - `calcTotalDuration()`: Calculates the total duration of the training plan.
-  - `calcNumExercises()`: Calculates the number of exercises in the training plan.
-
-### TrainingPlanLevel
-
-TrainingPlanLevel class is a specialized version of `TrainingPlan` class, additionally including a difficulty level.
-
-- **Properties**:
-  - `level`: Difficulty level as String (e.g., light, medium, heavy)
-- **Methods**:
-  - `filterTrainingPlan(level: String)`: Filters `TrainingPlan` by `Exercise` with `level`.
+- **Eigenschaften**:
+  - `name`: Der Name des Trainingsplans.
+  - `exercises`: Eine Liste der Übungen, die im Trainingsplan enthalten sind.
+  - `totalDuration`: Die Gesamtdauer des Trainingsplans in Sekunden.
+  - `numExercises`: Die Anzahl der Übungen im Trainingsplan.
+  - `level`: Der Schwierigkeitsgrad des Trainingsplans.
+- **Methoden**:
+  - `setName(name: String)`: Legt den Namen des Trainingsplans fest.
+  - `addExercise(exercise: Exercise)`: Fügt eine Übung zum Trainingsplan hinzu.
+  - `delExercise(exercise: Exercise)`: Entfernt eine Übung aus dem Trainingsplan.
+  - `startPlan()`: Diese Methode startet den Trainingsplan. Sie durchläuft jede Übung in der Liste `exercises`, startet einen Timer basierend auf der Dauer jeder Übung und gibt entsprechende Hinweise in der Konsole aus.
+  - `calcTotalDuration()`: Diese Methode berechnet die Gesamtdauer des Trainingsplans.
+  - `calcNumExercises()`: Diese Methode berechnet die Anzahl der Übungen im Trainingsplan.
+  - `setLevel(level: String)`: Legt den Schwierigkeitsgrad des Trainingsplans fest.
+  - `filterLevel()`: Filtert Übungen basierend auf dem festgelegten Schwierigkeitsgrad.
 
 ### Exercise
 
-Exercise class represents an exercise.
+Die Klasse Exercise repräsentiert eine einzelne Übung. Jede Übung hat einen Namen, eine Beschreibung, eine Anzahl von Runden, eine Dauer, eine Pause und einen Schwierigkeitsgrad.
 
-- **Properties**:
-  - `name`: String
-  - `description`: String
-  - `rounds`: Integer
-  - `duration`: Int (in seconds)
-  - `break`: Int (in seconds)
-- **Methods**:
-  - `setName(name: String)`: Sets the name of the exercise.
-  - `setDescription(description: String)`: Sets the description of the exercise.
-  - `setRounds(rounds: Int)`: Sets the number of rounds.
-  - `setDuration(duration: Int)`: Sets the duration of the exercise.
-  - `setBreak(break: Int)`: Sets the break time.
-  - `setLevel(level: String)`: Sets the difficulty level of the exercise.
+- **Eigenschaften**:
+  - `name`: Der Name der Übung.
+  - `description`: Eine Beschreibung der Übung.
+  - `rounds`: Die Anzahl der Runden, die in der Übung durchgeführt werden sollen.
+  - `duration`: Die Dauer jeder Runde in Sekunden.
+  - `pause`: Die Dauer der Pause zwischen den Runden in Sekunden.
+  - `level`: Der Schwierigkeitsgrad der Übung.
+- **Methoden**:
+  - `setName(name: String)`: Legt den Namen der Übung fest.
+  - `setDescription(description: String)`: Legt die Beschreibung der Übung fest.
+  - `setRounds(rounds: Int)`: Legt die Anzahl der Runden fest.
+  - `setDuration(duration: Int)`: Legt die Dauer jeder Runde fest.
+  - `setPause(pause: Int)`: Legt die Dauer der Pause zwischen den Runden fest.
+  - `setLevel(level: String)`: Legt den Schwierigkeitsgrad der Übung fest.
+
+### MedBallDrill
+
+Die Klasse MedBallDrill ist eine spezielle Art von Übung, die von der Klasse Exercise erbt. Sie fügt die Eigenschaft "Gewicht des Medizinballs" hinzu, sodass die Größe des Medizinballs an den Schwierigkeitsgrad angepasst werden kann.
+
+- **Eigenschaften**:
+  - `medballWeight`: Das Gewicht des Medizinballs in Kilogramm.
+- **Methoden**:
+  - `setMedballWeight(medballWeight: Int)`: Legt das Gewicht des Medizinballs fest.
