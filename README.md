@@ -6,7 +6,7 @@ This project contains a Boxing Timer application with various levels and exercis
 
 ## Classes
 
-<img src="img/BoxingTimer_KlassenDiagramm.png">
+<img src="img/KlassenDiagramm.png">
 
 ### BoxingTimer
 
