@@ -15,3 +15,4 @@ fun countdown(timeInSeconds: Int) {
         exitProcess(0)  // Beendet das Programm, wenn der Timer abgelaufen ist
     }
 }
+
