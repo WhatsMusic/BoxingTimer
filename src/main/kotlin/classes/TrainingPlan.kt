@@ -1,20 +1,20 @@
 class TrainingPlan(
-    var name: String,
-    var exercises: MutableList<Exercise>,
+    var trainingPlanName: String,
+    var trainingPlanExercises: MutableList<Exercise>,
     var totalDuration: Int,
     var numExercises: Int,
-    var level: String
+    var trainingPlanLevel: String
 ) {
-    fun setName(name: String) {
-        this.name = name
+    fun setName(trainingPlanName: String) {
+        this.trainingPlanName = trainingPlanName
     }
 
-    fun addExercise(exercise: Exercise) {
-        this.exercises.add(exercise)
+    fun addExercise(trainingPlanExercises: Exercise) {
+        this.trainingPlanExercises.add(trainingPlanExercises)
     }
 
-    fun delExercise(exercise: Exercise) {
-        this.exercises.remove(exercise)
+    fun delExercise(trainingPlanExercises: Exercise) {
+        this.trainingPlanExercises.remove(trainingPlanExercises)
     }
 
     fun startPlan() {
@@ -22,15 +22,15 @@ class TrainingPlan(
     }
 
     fun calcTotalDuration() {
-        //TODO: Logik zur Berechnung der Gesamtdauer des Ausbildungsplans
+        //TODO: Logik zur Berechnung der Gesamtdauer des Trainingsplan
     }
 
     fun calcNumExercises() {
         //TODO: Logik zur Berechnung der Anzahl der Übungen im Trainingsplan
     }
 
-    fun setLevel(level: String) {
-        this.level = level
+    fun setLevel(trainingPlanLevel: String) {
+        this.trainingPlanLevel = trainingPlanLevel
     }
 
     fun filterLevel() {

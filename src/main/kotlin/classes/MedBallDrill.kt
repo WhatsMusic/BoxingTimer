@@ -5,7 +5,7 @@ class MedBallDrill(
     duration: Int,
     pause: Int,
     level: String,
-    var medballWeight: Int
+    private var medballWeight: Int
 ) : Exercise(name, description, rounds, duration, pause, level) {
     fun setMedballWeight(medballWeight: Int) {
         this.medballWeight = medballWeight
