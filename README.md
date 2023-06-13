@@ -1,4 +1,4 @@
-
+<img align="right" width="50" height="50" src="img/syntaxLogo.png">
 
 # BoxingTimer
 
