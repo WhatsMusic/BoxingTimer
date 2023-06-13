@@ -12,3 +12,4 @@ open class TrainingPlan(val exercises: MutableList<Exercise>) {
         //TODO: Logik, um den Timer zu starten und die Konsole entsprechend zu aktualisieren
     }
 }
+
