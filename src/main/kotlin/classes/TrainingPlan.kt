@@ -1,9 +1,9 @@
 class TrainingPlan(
-    var trainingPlanName: String,
-    var trainingPlanExercises: MutableList<Exercise>,
+    private var trainingPlanName: String,
+    private var trainingPlanExercises: MutableList<Exercise>,
     var totalDuration: Int,
     var numExercises: Int,
-    var trainingPlanLevel: String
+    private var trainingPlanLevel: String
 ) {
     fun setName(trainingPlanName: String) {
         this.trainingPlanName = trainingPlanName

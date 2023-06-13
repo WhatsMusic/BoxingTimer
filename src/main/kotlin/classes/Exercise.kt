@@ -1,32 +1,32 @@
 open class Exercise(
-    var exerciseName: String,
-    var exerciseDescription: String,
-    var exerciseRounds: Int,
-    var exerciseDuration: Int,
-    var exercisePause: Int,
-    var exerciseLevel: String
+    private var name: String,
+    private var description: String,
+    private var rounds: Int,
+    private var duration: Int,
+    private var pause: Int,
+    private var level: String
 ) {
-    fun setName(exerciseName: String) {
-        this.exerciseName = exerciseName
+    fun setExerciseName(name: String) {
+        this.name = name
     }
 
-    fun setDescription(exerciseDescription: String) {
-        this.exerciseDescription = exerciseDescription
+    fun setExerciseDescription(description: String) {
+        this.description = description
     }
 
-    fun setRounds(exerciseRounds: Int) {
-        this.exerciseRounds = exerciseRounds
+    fun setExerciseRounds(rounds: Int) {
+        this.rounds = rounds
     }
 
-    fun setDuration(exerciseDuration: Int) {
-        this.exerciseDuration = exerciseDuration
+    fun setExerciseDuration(duration: Int) {
+        this.duration = duration
     }
 
-    fun setPause(exercisePause: Int) {
-        this.exercisePause = exercisePause
+    fun setExercisePause(pause: Int) {
+        this.pause = pause
     }
 
-    fun setLevel(exerciseLevel: String) {
-        this.exerciseLevel = exerciseLevel
+    fun setExerciseLevel(level: String) {
+        this.level = level
     }
 }
