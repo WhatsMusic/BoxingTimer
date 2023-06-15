@@ -1,7 +1,12 @@
-import java.util.*
-import kotlin.system.exitProcess
+import Exercise
 
 fun main(){
+        //erwartet Auswahl des Schwierigkeitsgrads
+        setLevel()
+
+        //zeigt den gewählten level
+        printLevel()
+
         //erstellt eine Liste mit Übungen
         setExercises()
 
@@ -15,5 +20,7 @@ fun main(){
 
 
 }
+
+
 
 
