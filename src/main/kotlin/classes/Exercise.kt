@@ -18,7 +18,7 @@ open class Exercise(
     // Erstellen einer spezifischen Klasse für RopeSkipping
     class RopeSkipping(level: String) : Exercise(
         name = "Rope-Skipping",
-        description = "Rope Skipping routines are crucial for enhancing speed, agility, and cardio endurance. These high-intensity bursts help replicate the stop-and-start nature of boxing, while also improving footwork, a key component for effective in-ring movement. The combination of endurance, coordination, and timing development makes rope skipping an integral part of any boxing regimen.",
+        description = "Rope Skipping routines are crucial for enhancing speed, agility, and cardio endurance.",
         rounds = when(level) {
             "beginner" -> 3
             "advanced" -> 3
@@ -46,7 +46,7 @@ open class Exercise(
     // Erstellen einer spezifischen Klasse für ShadowBoxing
     class ShadowBoxing(level: String) : Exercise(
         name = "Shadow-Boxing",
-        description = "Shadow boxing focuses on the execution of movements and the perfection of techniques. Practiced often in front of a mirror, boxers can self-critique and improve their punches, footwork, and defensive maneuvers without the pressure of an opponent. This drill develops muscle memory, enhances speed and precision, and helps internalize effective boxing strategies.",
+        description = "Shadow boxing focuses on the execution of movements and the perfection of techniques.",
         rounds = when(level) {
             "beginner" -> 3
             "advanced" -> 3
@@ -74,7 +74,7 @@ open class Exercise(
     // Erstellen einer spezifischen Klasse für Sparring
     class Sparring(level: String) : Exercise(
         name = "Sparring",
-        description = "Sparring is a practical, controlled application of boxing techniques against an opponent, often under the supervision of a coach. This session allows boxers to test their skills, strategy, and stamina in a setting that closely simulates a real fight. By experiencing offensive and defensive scenarios, participants refine their timing, precision, and reactions, making sparring an invaluable tool for improving ring craft and building confidence.",
+        description = "Sparring is a practical, controlled application of boxing techniques against an opponent, often under the supervision of a coach.",
         rounds = when(level) {
             "beginner" -> 3
             "advanced" -> 5
@@ -102,7 +102,7 @@ open class Exercise(
     // Erstellung der Objekte
     val warmUp = Exercise(
         name = "Warm-Up",
-        description = "The 5-minute warm-up is essential to prepare the body for the intensity of boxing. It consists of light exercises such as jogging, stretching, or bodyweight movements, which gradually increase the heart rate, loosen the joints, and warm up the muscles, reducing the risk of injury during subsequent high-intensity training. This preparatory phase also mentally gears up the participant for the rigorous workout ahead.",
+        description = "The 5-minute warm-up is essential to prepare the body for the intensity of boxing.",
         rounds = 1,
         duration = 15,
         pause = 5,
@@ -113,7 +113,7 @@ open class Exercise(
     val sparring = Sparring(selectedLevel)
     val coolDown = Exercise(
     name = "Cool-Down",
-    description = "The cool-down phase is the final stage of a boxing training session, aimed at gradually reducing the heart rate and relaxing the muscles. This typically includes slow-paced exercises like walking, light stretching, or yoga poses, which help in preventing muscle stiffness, improving flexibility, and aiding in the recovery process. The cool-down phase also serves as a time for mental relaxation, allowing trainees to reflect on their performance during the session.",
+    description = "The cool-down phase is the final stage of a boxing training session, aimed at gradually reducing the heart rate and relaxing the muscles.",
     rounds = 1,
     duration = 20,
     pause = 0,

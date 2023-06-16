@@ -1,4 +1,4 @@
-open class TrainingPlan(
+class TrainingPlan(
     var name: String,
     var exercises: MutableList<Exercise>,
     var level: String

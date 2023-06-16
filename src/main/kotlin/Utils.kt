@@ -33,6 +33,7 @@ fun setLevel() {
     }
 }
 
+/*
 fun countdown(timeInSeconds: Int) {
     var timeRemaining = timeInSeconds
 
@@ -46,6 +47,7 @@ fun countdown(timeInSeconds: Int) {
         exitProcess(0)  // Beendet das Programm, wenn der Timer abgelaufen ist
     }
 }
+*/
 
 //Erwartet Zeit in Sekunden und startet Countdown
 fun startCountdown(){

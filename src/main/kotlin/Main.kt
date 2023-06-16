@@ -10,8 +10,11 @@ fun main(){
     //Zeigt den Trainingsplan
     showTrainingPlan()
 
-    //Listet alle Übungen auf
+    //Listet alle Übungen aus dem Trainingsplan auf
     listExercises()
+
+    //startet das Training
+    startBoxingTimer()
 
 }
 
