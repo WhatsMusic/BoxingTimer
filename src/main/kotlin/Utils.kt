@@ -5,11 +5,18 @@ var selectedLevel = ""
 fun printLevel() {
     println("Your selected level is $selectedLevel")
 }
+
+fun showTrainingPlan() {
+
+    println("Trainingsplan: ${plan.name}, Gesamtdauer: ${plan.minutes}:${plan.seconds} Minuten, Anzahl der Übungen: ${plan.numExercises}")
+}
+
 fun setLevel() {
     println("\nSelect the level of your training:\n\n" +
             "[1] for Beginner\n" +
             "[2] for Advanced\n" +
             "[3] for Professional\n" +
+            "[4] for Demo\n" +
             "Type the number: ")
     val selectLevel = readln()?.toInt()
 
@@ -17,8 +24,9 @@ fun setLevel() {
         1 -> "beginner"
         2 -> "advanced"
         3 -> "professional"
+        4 -> "demo"
         else -> {
-            println("Wrong input! Only type 1, 2 or 3")
+            println("Wrong input! Only type 1, 2, 3 or 4")
             setLevel()
             return
         }

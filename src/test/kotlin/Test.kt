@@ -5,13 +5,16 @@ fun main(){
         setLevel()
 
         //zeigt den gewählten level
-        printLevel()
+        //printLevel()
 
         //erstellt eine Liste mit Übungen
         setExercises()
 
         //Listet alle Übungen auf
-        listExercises()
+        //listExercises()
+
+        showTrainingPlan()
+
 
 
         //Erwartet Zeit in Sekunden und startet Countdown

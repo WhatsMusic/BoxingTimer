@@ -23,19 +23,22 @@ open class Exercise(
             "beginner" -> 3
             "advanced" -> 3
             "professional" -> 3
-            else -> 3 //Default-Wert
+            "demo" -> 2
+            else -> 1 //Default-Wert
         },
         duration = when(level) {
             "beginner" -> 60
             "advanced" -> 90
             "professional" -> 180
-            else -> 90 //Default-Wert
+            "demo" -> 10
+            else -> 10 //Default-Wert
         },
         pause = when(level) {
             "beginner" -> 60
             "advanced" -> 60
             "professional" -> 60
-            else -> 60 //Default-Wert
+            "demo" -> 5
+            else -> 5 //Default-Wert
         },
         level = level
     )
@@ -48,19 +51,22 @@ open class Exercise(
             "beginner" -> 3
             "advanced" -> 3
             "professional" -> 3
-            else -> 3 //Default-Wert
+            "demo" -> 2
+            else -> 1 //Default-Wert
         },
         duration = when(level) {
             "beginner" -> 60
             "advanced" -> 120
             "professional" -> 180
+            "demo" -> 10
             else -> 120 //Default-Wert
         },
         pause = when(level) {
             "beginner" -> 60
             "advanced" -> 60
             "professional" -> 30
-            else -> 60 //Default-Wert
+            "demo" -> 5
+            else -> 5 //Default-Wert
         },
         level = level
     )
@@ -73,19 +79,22 @@ open class Exercise(
             "beginner" -> 3
             "advanced" -> 5
             "professional" -> 6
-            else -> 3 //Default-Wert
+            "demo" -> 2
+            else -> 1 //Default-Wert
         },
         duration = when(level) {
             "beginner" -> 180
             "advanced" -> 180
             "professional" -> 180
-            else -> 90 //Default-Wert
+            "demo" -> 15
+            else -> 10 //Default-Wert
         },
         pause = when(level) {
             "beginner" -> 60
             "advanced" -> 60
             "professional" -> 60
-            else -> 60 //Default-Wert
+            "demo" -> 5
+            else -> 10 //Default-Wert
         },
         level = level
     )
@@ -95,8 +104,8 @@ open class Exercise(
         name = "Warm-Up",
         description = "The 5-minute warm-up is essential to prepare the body for the intensity of boxing. It consists of light exercises such as jogging, stretching, or bodyweight movements, which gradually increase the heart rate, loosen the joints, and warm up the muscles, reducing the risk of injury during subsequent high-intensity training. This preparatory phase also mentally gears up the participant for the rigorous workout ahead.",
         rounds = 1,
-        duration = 300,
-        pause = 60,
+        duration = 15,
+        pause = 5,
         level = selectedLevel
     )
     val ropeSkipping = RopeSkipping(selectedLevel)
@@ -106,7 +115,7 @@ open class Exercise(
     name = "Cool-Down",
     description = "The cool-down phase is the final stage of a boxing training session, aimed at gradually reducing the heart rate and relaxing the muscles. This typically includes slow-paced exercises like walking, light stretching, or yoga poses, which help in preventing muscle stiffness, improving flexibility, and aiding in the recovery process. The cool-down phase also serves as a time for mental relaxation, allowing trainees to reflect on their performance during the session.",
     rounds = 1,
-    duration = 600,
+    duration = 20,
     pause = 0,
     level = selectedLevel
 )
