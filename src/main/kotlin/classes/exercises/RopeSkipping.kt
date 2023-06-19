@@ -1,9 +1,8 @@
 package classes.exercises
-
-import classes.Exercise
 import classes.BoxingTimer
+import classes.Exercise
 
-// Erstellen einer spezifischen Klasse für RopeSkipping
+// Create a specific class for RopeSkipping
 class RopeSkipping(level: String) : Exercise(
     name = "Rope-Skipping",
     description = "Rope Skipping routines are crucial for enhancing speed, agility, and cardio endurance.",

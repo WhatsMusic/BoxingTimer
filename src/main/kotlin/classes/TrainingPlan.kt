@@ -4,18 +4,18 @@ import wrapString
 
 
 
-class TrainingPlan(
-    var name: String,
-    var exercises: MutableList<Exercise>,
-    var level: String
-) {
+    class TrainingPlan(
+        var name: String,
+        var exercises: MutableList<Exercise>,
+        var level: String
+    ) {
 
     companion object {
 
-
         fun startTraining() {
             val totalSeconds = exercises.sumOf { (it.rounds * (it.duration + it.pause) + it.nextExercise) }
-            // Hinzufügen der zusätzlichen Pausen zur Gesamtzeit
+            // Adding the additional pauses to the total time.
+
             //totalSeconds += (classes.getExercises.size - 1)
 
             var remainingTotalSeconds = totalSeconds
@@ -43,7 +43,7 @@ class TrainingPlan(
                         countdown(exercise.pause, pauseAction)
                     }
                 }
-                if (index < exercises.size - 1) { // Wenn es nicht die letzte Übung ist
+                if (index < exercises.size - 1) { // If it is not the last exercise
                     val transitionAction = "The next exercise starts in"
                     val exerciseBreak = String.format("%02d",exercise.nextExercise)
                     countdown(exerciseBreak.toInt(), transitionAction)
@@ -55,7 +55,7 @@ class TrainingPlan(
 
         fun showTrainingPlan() {
             val totalSeconds = exercises.sumOf { (it.rounds * (it.duration + it.pause) + it.nextExercise) }
-            // Hinzufügen der zusätzlichen Pausen zur Gesamtzeit
+            // Adding the additional pauses to the total time.
             //totalSeconds += (classes.getExercises.size - 1)
             val formattedMinutes = String.format("%02d", totalSeconds / 60)
             val formattedSeconds = String.format("%02d", totalSeconds % 60)
@@ -65,21 +65,18 @@ class TrainingPlan(
     }
 
         private var totalDuration: Int = exercises.sumOf { (it.rounds * (it.duration + it.pause) + it.nextExercise) }
-    var numExercises: Int = exercises.size
+        var numExercises: Int = exercises.size
 
-    init {
+        init {
         name = BoxingTimer.selectedLevel
         totalDuration = exercises.sumOf { (it.rounds * (it.duration + it.pause) + it.nextExercise) }
         numExercises = exercises.size
+        }
     }
 
-
-}
-
-
-val plan = TrainingPlan(
-    name = BoxingTimer.selectedLevel,
-    exercises = exercises,
-    level = BoxingTimer.selectedLevel
-)
+        val plan = TrainingPlan(
+        name = BoxingTimer.selectedLevel,
+        exercises = exercises,
+        level = BoxingTimer.selectedLevel
+        )
 

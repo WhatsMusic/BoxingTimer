@@ -1,29 +1,24 @@
-
 import classes.BoxingTimer.Companion.boxingTimerMenu
 import classes.BoxingTimer.Companion.setLevel
 import classes.Exercise.Companion.setExercises
 
 
 fun main(){
-    //Some Ascii Art with Project Domain as Header
-    println("""        
-             
+    //Some ascii artwork with project domain as heading.
+    println("""             
         (ง •̀!•́)ง ผ(•̀¿•́ผ)
-        BOXING-TIMER.COM        
+        BOXING-TIMER.COM
     """.trimIndent())
 
-
-    // Rufe setLevel Methode auf der Instanz auf
+    // User query by difficulty level
     setLevel()
 
-    //erstellt die Übungen
+    //creates the exercises depending on the difficulty level
     setExercises()
 
-    // Rufe boxingTimerMenu Methode auf der Instanz auf
+    //Menu to display an overview of the individual exercises in the selected training plan.
+    //or start the training
     boxingTimerMenu()
-
-
-
 
 }
 

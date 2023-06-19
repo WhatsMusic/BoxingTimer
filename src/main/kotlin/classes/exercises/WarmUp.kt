@@ -1,9 +1,8 @@
 package classes.exercises
-
-import classes.Exercise
 import classes.BoxingTimer
+import classes.Exercise
 
-// Erstellen einer spezifischen Klasse für Warm-Up
+// Create a specific class for Warm-Up
 class WarmUp(level: String) : Exercise(
     name = "Warm-Up",
     description = "The 5-minute warm-up is essential to prepare the body for the intensity of boxing.",

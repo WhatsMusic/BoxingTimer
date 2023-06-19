@@ -15,9 +15,7 @@ open class Exercise(
     var nextExercise: Int
 ) {
 
-
     companion object {
-
 
         fun setExercises() {
             exercises.add(warmUp)
@@ -26,7 +24,7 @@ open class Exercise(
             exercises.add(sparring)
             exercises.add(coolDown)
         }
-        //Listet alle Übungen auf
+        //Lists all exercises
         fun listExercises(){
 
             println("\n-----Exercise Overview-----\n".toBold())
@@ -44,48 +42,17 @@ open class Exercise(
 
             boxingTimerMenu()
 
-
         }
     }
 }
 
-
-
-// Erstellung der Objekte
+// Creation of the objects
     val warmUp = WarmUp(BoxingTimer.selectedLevel)
     val ropeSkipping = RopeSkipping(BoxingTimer.selectedLevel)
     val shadowBoxing = ShadowBoxing(BoxingTimer.selectedLevel)
     val sparring = Sparring(BoxingTimer.selectedLevel)
     val coolDown = CoolDown(BoxingTimer.selectedLevel)
 
-
-
-    /* Methoden sind Bonus
-
-    fun setExerciseName(name: String) {
-        this.name = name
-    }
-
-    fun setExerciseDescription(description: String) {
-        this.description = description
-    }
-
-    fun setExerciseRounds(rounds: Int) {
-        this.rounds = rounds
-    }
-
-    fun setExerciseDuration(duration: Int) {
-        this.duration = duration
-    }
-
-    fun setExercisePause(pause: Int) {
-        this.pause = pause
-    }
-
-    fun setExerciseLevel(level: String) {
-        this.level = level
-    }
-     */
 
 
 

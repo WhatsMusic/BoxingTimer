@@ -46,10 +46,10 @@ open class BoxingTimer {
             """.trimMargin()
                 )
                         when(readln().toInt()) {
-                                1 -> listExercises() //Listet alle Übungen aus dem Trainingsplan auf
+                                1 -> listExercises() //Lists all exercises from the training plan
                                 2 -> {
-                                        showTrainingPlan() //Zeigt den Trainingsplan
-                                        startTraining() //startet das Training
+                                        showTrainingPlan() //Shows the training plan
+                                        startTraining() //starts the training
                                 }
 
                                 else -> {

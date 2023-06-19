@@ -1,9 +1,8 @@
 package classes.exercises
-
-import classes.Exercise
 import classes.BoxingTimer
+import classes.Exercise
 
-// Erstellen einer spezifischen Klasse für ShadowBoxing
+// Create a specific class for ShadowBoxing
 class ShadowBoxing(level: String) : Exercise(
     name = "Shadow-Boxing",
     description = "Shadow boxing focuses on the execution of movements and the perfection of techniques.",
@@ -11,7 +10,7 @@ class ShadowBoxing(level: String) : Exercise(
         "Beginner" -> 3
         "Advanced" -> 3
         "Professional" -> 3
-        "Demo" -> 2
+        "Demo" -> 3
         else -> 1 //Default-Wert
     },
     duration = when(BoxingTimer.selectedLevel) {

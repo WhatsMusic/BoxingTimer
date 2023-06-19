@@ -1,9 +1,8 @@
 package classes.exercises
-
 import classes.BoxingTimer
 import classes.Exercise
 
-// Erstellen einer spezifischen Klasse für Cool-Down
+// Create a specific class for cool-down
 class CoolDown(level: String) : Exercise(
     name = "Cool-Down",
     description = "The cool-down phase is the final stage of a boxing training session, aimed at gradually reducing the heart rate and relaxing the muscles.",

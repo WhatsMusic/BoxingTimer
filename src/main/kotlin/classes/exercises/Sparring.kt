@@ -1,9 +1,8 @@
 package classes.exercises
-
-import classes.Exercise
 import classes.BoxingTimer
+import classes.Exercise
 
-// Erstellen einer spezifischen Klasse für Sparring
+// Create a specific class for sparring
 class Sparring(level: String) : Exercise(
     name = "Sparring",
     description = "Sparring is a practical, controlled application of boxing techniques against an opponent, often under the supervision of a coach.",
