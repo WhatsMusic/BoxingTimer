@@ -11,7 +11,7 @@ class TrainingPlan(
 
 
         fun startTraining() {
-            var totalSeconds = exercises.sumOf { it.rounds * (it.duration + it.pause) + it.nextExercise }
+            var totalSeconds = exercises.sumOf { (it.rounds * (it.duration + it.pause) + it.nextExercise) -1 }
             // Hinzufügen der zusätzlichen Pausen zur Gesamtzeit
             //totalSeconds += (exercises.size - 1)
 
@@ -51,7 +51,7 @@ class TrainingPlan(
         }
 
         fun showTrainingPlan() {
-            var totalSeconds = exercises.sumOf { it.rounds * (it.duration + it.pause) + it.nextExercise }
+            var totalSeconds = exercises.sumOf { (it.rounds * (it.duration + it.pause) + it.nextExercise) -1 }
             // Hinzufügen der zusätzlichen Pausen zur Gesamtzeit
             //totalSeconds += (exercises.size - 1)
             val formattedMinutes = String.format("%02d", totalSeconds / 60)
