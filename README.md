@@ -1,10 +1,10 @@
 <img align="right" width="64" height="64" src="img/syntaxLogo.png" alt="Syntax Institut Logo">
 
-## Batch08 Grundlagen der Programmierung
+## Batch08 Programming basics
 
-## Klassendiagramm
+## Class diagram
 
-<img src="img/Klassendiagramm_BoxingTimer.png" alt="classes.BoxingTimer Klassendiagramm">
+<img src="img/Klassendiagramm_BoxingTimer.png" alt="classes.BoxingTimer Class diagram">
 
 # BoxingTimer Class
 
