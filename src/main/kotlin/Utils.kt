@@ -7,8 +7,13 @@ fun printLevel() {
 }
 
 fun showTrainingPlan() {
+    var totalSeconds = exercises.sumOf { it.rounds * (it.duration + it.pause) }
+    // Hinzufügen der zusätzlichen Pausen zur Gesamtzeit
+    totalSeconds += (exercises.size - 1) * 60
+    val formattedMinutes = String.format("%02d", totalSeconds / 60)
+    val formattedSeconds = String.format("%02d", totalSeconds % 60)
 
-    println("Trainingsplan: ${plan.name}, Gesamtdauer: ${plan.minutes}:${plan.seconds} Minuten, Anzahl der Übungen: ${plan.numExercises}")
+    print("Trainingsplan: ${plan.name}, Gesamtzeit ${formattedMinutes.toBold()}:${formattedSeconds.toBold()} Minuten, Anzahl der Übungen: ${plan.numExercises}")
 }
 
 fun setLevel() {
@@ -34,7 +39,7 @@ fun setLevel() {
 }
 
 /*
-fun countdown(timeInSeconds: Int) {
+fun classes.countdown(timeInSeconds: Int) {
     var timeRemaining = timeInSeconds
 
     thread(start = true) {
@@ -47,15 +52,15 @@ fun countdown(timeInSeconds: Int) {
         exitProcess(0)  // Beendet das Programm, wenn der Timer abgelaufen ist
     }
 }
-*/
+
 
 //Erwartet Zeit in Sekunden und startet Countdown
 fun startCountdown(){
     println("Bitte geben Sie die Zeit in Sekunden ein:")
     val timeInSeconds = readln().toInt()
-    countdown(timeInSeconds)
+    classes.countdown(timeInSeconds)
 }
-
+*/
 //TODO: repeat(exercises.rounds) verwenden
 
 //TODO: exercises.sumOf um die Gesamtzeit zu kalkulieren { exercise -> exercise.duration }

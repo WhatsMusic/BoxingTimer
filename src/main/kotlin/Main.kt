@@ -1,4 +1,4 @@
-
+import classes.startBoxingTimer
 
 fun main(){
     //erwartet Auswahl des Schwierigkeitsgrads
@@ -11,7 +11,7 @@ fun main(){
     showTrainingPlan()
 
     //Listet alle Übungen aus dem Trainingsplan auf
-    listExercises()
+    //ListExercises()
 
     //startet das Training
     startBoxingTimer()

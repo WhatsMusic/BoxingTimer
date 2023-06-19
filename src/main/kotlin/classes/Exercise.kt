@@ -5,7 +5,8 @@ open class Exercise(
     var rounds: Int,
     var duration: Int,
     var pause: Int,
-    var level: String
+    var level: String,
+    var nextExercise: Int
 )
     fun setExercises(){
         exercises.add(warmUp)
@@ -14,6 +15,43 @@ open class Exercise(
         exercises.add(sparring)
         exercises.add(coolDown)
     }
+
+
+    // Erstellen einer spezifischen Klasse für Warm-Up
+    class WarmUp(level: String) : Exercise(
+        name = "Warm-Up",
+        description = "The 5-minute warm-up is essential to prepare the body for the intensity of boxing.",
+        rounds = when(level) {
+            "beginner" -> 1
+            "advanced" -> 1
+            "professional" -> 1
+            "demo" -> 1
+            else -> 1 //Default-Wert
+        },
+        duration = when(level) {
+            "beginner" -> 300
+            "advanced" -> 300
+            "professional" -> 300
+            "demo" -> 10
+            else -> 10 //Default-Wert
+        },
+        pause = when(level) {
+            "beginner" -> 0
+            "advanced" -> 0
+            "professional" -> 0
+            "demo" -> 0
+            else -> 0 //Default-Wert
+        },
+        level = selectedLevel,
+        nextExercise = when(level) {
+            "beginner" -> 60
+            "advanced" -> 60
+            "professional" -> 60
+            "demo" -> 10
+            else -> 60 //Default-Wert
+        }
+    )
+
 
     // Erstellen einer spezifischen Klasse für RopeSkipping
     class RopeSkipping(level: String) : Exercise(
@@ -40,7 +78,14 @@ open class Exercise(
             "demo" -> 5
             else -> 5 //Default-Wert
         },
-        level = level
+        level = level,
+        nextExercise = when(level) {
+            "beginner" -> 60
+            "advanced" -> 60
+            "professional" -> 60
+            "demo" -> 10
+            else -> 60 //Default-Wert
+        }
     )
 
     // Erstellen einer spezifischen Klasse für ShadowBoxing
@@ -68,7 +113,14 @@ open class Exercise(
             "demo" -> 5
             else -> 5 //Default-Wert
         },
-        level = level
+        level = level,
+        nextExercise = when(level) {
+            "beginner" -> 60
+            "advanced" -> 60
+            "professional" -> 60
+            "demo" -> 10
+            else -> 60 //Default-Wert
+        }
     )
 
     // Erstellen einer spezifischen Klasse für Sparring
@@ -96,29 +148,55 @@ open class Exercise(
             "demo" -> 5
             else -> 10 //Default-Wert
         },
-        level = level
+        level = level,
+        nextExercise = when(level) {
+            "beginner" -> 60
+            "advanced" -> 60
+            "professional" -> 60
+            "demo" -> 10
+            else -> 60 //Default-Wert
+        }
     )
 
-    // Erstellung der Objekte
-    val warmUp = Exercise(
-        name = "Warm-Up",
-        description = "The 5-minute warm-up is essential to prepare the body for the intensity of boxing.",
-        rounds = 1,
-        duration = 15,
-        pause = 5,
-        level = selectedLevel
+
+    // Erstellen einer spezifischen Klasse für Cool-Down
+    class CoolDown(level: String) : Exercise(
+        name = "Cool-Down",
+        description = "The cool-down phase is the final stage of a boxing training session, aimed at gradually reducing the heart rate and relaxing the muscles.",
+        rounds = when(level) {
+            "beginner" -> 1
+            "advanced" -> 1
+            "professional" -> 1
+            "demo" -> 1
+            else -> 1 //Default-Wert
+        },
+        duration = when(level) {
+            "beginner" -> 600
+            "advanced" -> 600
+            "professional" -> 600
+            "demo" -> 10
+            else -> 10 //Default-Wert
+        },
+        pause = when(level) {
+            "beginner" -> 0
+            "advanced" -> 0
+            "professional" -> 0
+            "demo" -> 0
+            else -> 0 //Default-Wert
+        },
+        level = selectedLevel,
+        nextExercise = 0
     )
+
+
+
+    // Erstellung der Objekte
+    val warmUp = WarmUp(selectedLevel)
     val ropeSkipping = RopeSkipping(selectedLevel)
     val shadowBoxing = ShadowBoxing(selectedLevel)
     val sparring = Sparring(selectedLevel)
-    val coolDown = Exercise(
-    name = "Cool-Down",
-    description = "The cool-down phase is the final stage of a boxing training session, aimed at gradually reducing the heart rate and relaxing the muscles.",
-    rounds = 1,
-    duration = 20,
-    pause = 0,
-    level = selectedLevel
-)
+    val coolDown = CoolDown(selectedLevel)
+
 
 
     /* Methoden sind Bonus

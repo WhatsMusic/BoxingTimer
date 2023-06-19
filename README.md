@@ -2,17 +2,17 @@
 
 ## Batch08 Grundlagen der Programmierung
 
-# BoxingTimer
+# classes.BoxingTimer
 
 Dieses Projekt enthält eine Boxing Timer-Anwendung mit verschiedenen Übungen und Schwierigkeitsgraden.
 
 ## Hauptklassen
 
-<img src="img/Klassendiagramm.png" alt="BoxingTimer Klassendiagramm">
+<img src="img/Klassendiagramm.png" alt="classes.BoxingTimer Klassendiagramm">
 
-### BoxingTimer
+### classes.BoxingTimer
 
-Die Klasse BoxingTimer verwaltet eine Liste von Trainingsplänen. Jeder dieser Pläne kann ausgewählt und ausgeführt werden.
+Die Klasse classes.BoxingTimer verwaltet eine Liste von Trainingsplänen. Jeder dieser Pläne kann ausgewählt und ausgeführt werden.
 
 - **Eigenschaften**:
   - `trainingPlans`: Eine Liste der zur Verfügung stehenden Trainingspläne.
