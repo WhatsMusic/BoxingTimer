@@ -22,32 +22,32 @@ open class Exercise(
         name = "Warm-Up",
         description = "The 5-minute warm-up is essential to prepare the body for the intensity of boxing.",
         rounds = when(level) {
-            "beginner" -> 1
-            "advanced" -> 1
-            "professional" -> 1
-            "demo" -> 1
+            "Beginner" -> 1
+            "Advanced" -> 1
+            "Professional" -> 1
+            "Demo" -> 1
             else -> 1 //Default-Wert
         },
         duration = when(level) {
-            "beginner" -> 300
-            "advanced" -> 300
-            "professional" -> 300
-            "demo" -> 10
+            "Beginner" -> 300
+            "Advanced" -> 300
+            "Professional" -> 300
+            "Demo" -> 10
             else -> 10 //Default-Wert
         },
         pause = when(level) {
-            "beginner" -> 0
-            "advanced" -> 0
-            "professional" -> 0
-            "demo" -> 0
+            "Beginner" -> 0
+            "Advanced" -> 0
+            "Professional" -> 0
+            "Demo" -> 0
             else -> 0 //Default-Wert
         },
         level = selectedLevel,
         nextExercise = when(level) {
-            "beginner" -> 60
-            "advanced" -> 60
-            "professional" -> 60
-            "demo" -> 10
+            "Beginner" -> 60
+            "Advanced" -> 60
+            "Professional" -> 60
+            "Demo" -> 10
             else -> 60 //Default-Wert
         }
     )
@@ -58,32 +58,32 @@ open class Exercise(
         name = "Rope-Skipping",
         description = "Rope Skipping routines are crucial for enhancing speed, agility, and cardio endurance.",
         rounds = when(level) {
-            "beginner" -> 3
-            "advanced" -> 3
-            "professional" -> 3
-            "demo" -> 2
+            "Beginner" -> 3
+            "Advanced" -> 3
+            "Professional" -> 3
+            "Demo" -> 2
             else -> 1 //Default-Wert
         },
         duration = when(level) {
-            "beginner" -> 60
-            "advanced" -> 90
-            "professional" -> 180
-            "demo" -> 10
+            "Beginner" -> 60
+            "Advanced" -> 90
+            "Professional" -> 180
+            "Demo" -> 10
             else -> 10 //Default-Wert
         },
         pause = when(level) {
-            "beginner" -> 60
-            "advanced" -> 60
-            "professional" -> 60
-            "demo" -> 5
+            "Beginner" -> 60
+            "Advanced" -> 60
+            "Professional" -> 60
+            "Demo" -> 5
             else -> 5 //Default-Wert
         },
         level = level,
         nextExercise = when(level) {
-            "beginner" -> 60
-            "advanced" -> 60
-            "professional" -> 60
-            "demo" -> 10
+            "Beginner" -> 60
+            "Advanced" -> 60
+            "Professional" -> 60
+            "Demo" -> 10
             else -> 60 //Default-Wert
         }
     )
@@ -93,32 +93,32 @@ open class Exercise(
         name = "Shadow-Boxing",
         description = "Shadow boxing focuses on the execution of movements and the perfection of techniques.",
         rounds = when(level) {
-            "beginner" -> 3
-            "advanced" -> 3
-            "professional" -> 3
-            "demo" -> 2
+            "Beginner" -> 3
+            "Advanced" -> 3
+            "Professional" -> 3
+            "Demo" -> 2
             else -> 1 //Default-Wert
         },
         duration = when(level) {
-            "beginner" -> 60
-            "advanced" -> 120
-            "professional" -> 180
-            "demo" -> 10
+            "Beginner" -> 60
+            "Advanced" -> 120
+            "Professional" -> 180
+            "Demo" -> 10
             else -> 120 //Default-Wert
         },
         pause = when(level) {
-            "beginner" -> 60
-            "advanced" -> 60
-            "professional" -> 30
-            "demo" -> 5
+            "Beginner" -> 60
+            "Advanced" -> 60
+            "Professional" -> 30
+            "Demo" -> 5
             else -> 5 //Default-Wert
         },
         level = level,
         nextExercise = when(level) {
-            "beginner" -> 60
-            "advanced" -> 60
-            "professional" -> 60
-            "demo" -> 10
+            "Beginner" -> 60
+            "Advanced" -> 60
+            "Professional" -> 60
+            "Demo" -> 10
             else -> 60 //Default-Wert
         }
     )
@@ -128,32 +128,32 @@ open class Exercise(
         name = "Sparring",
         description = "Sparring is a practical, controlled application of boxing techniques against an opponent, often under the supervision of a coach.",
         rounds = when(level) {
-            "beginner" -> 3
-            "advanced" -> 5
-            "professional" -> 6
-            "demo" -> 2
+            "Beginner" -> 3
+            "Advanced" -> 5
+            "Professional" -> 6
+            "Demo" -> 2
             else -> 1 //Default-Wert
         },
         duration = when(level) {
-            "beginner" -> 180
-            "advanced" -> 180
-            "professional" -> 180
-            "demo" -> 15
+            "Beginner" -> 180
+            "Advanced" -> 180
+            "Professional" -> 180
+            "Demo" -> 15
             else -> 10 //Default-Wert
         },
         pause = when(level) {
-            "beginner" -> 60
-            "advanced" -> 60
-            "professional" -> 60
-            "demo" -> 5
+            "Beginner" -> 60
+            "Advanced" -> 60
+            "Professional" -> 60
+            "Demo" -> 5
             else -> 10 //Default-Wert
         },
         level = level,
         nextExercise = when(level) {
-            "beginner" -> 60
-            "advanced" -> 60
-            "professional" -> 60
-            "demo" -> 10
+            "Beginner" -> 60
+            "Advanced" -> 60
+            "Professional" -> 60
+            "Demo" -> 10
             else -> 60 //Default-Wert
         }
     )
@@ -164,24 +164,24 @@ open class Exercise(
         name = "Cool-Down",
         description = "The cool-down phase is the final stage of a boxing training session, aimed at gradually reducing the heart rate and relaxing the muscles.",
         rounds = when(level) {
-            "beginner" -> 1
-            "advanced" -> 1
-            "professional" -> 1
-            "demo" -> 1
+            "Beginner" -> 1
+            "Advanced" -> 1
+            "Professional" -> 1
+            "Demo" -> 1
             else -> 1 //Default-Wert
         },
         duration = when(level) {
-            "beginner" -> 600
-            "advanced" -> 600
-            "professional" -> 600
-            "demo" -> 10
+            "Beginner" -> 600
+            "Advanced" -> 600
+            "Professional" -> 600
+            "Demo" -> 10
             else -> 10 //Default-Wert
         },
         pause = when(level) {
-            "beginner" -> 0
-            "advanced" -> 0
-            "professional" -> 0
-            "demo" -> 0
+            "Beginner" -> 0
+            "Advanced" -> 0
+            "Professional" -> 0
+            "Demo" -> 0
             else -> 0 //Default-Wert
         },
         level = selectedLevel,

@@ -1,6 +1,14 @@
-import classes.startBoxingTimer
+import classes.BoxingTimer
+
+
 
 fun main(){
+
+    println("""        
+             
+        (ง •̀!•́)ง ผ(•̀¿•́ผ)
+        BOXING-TIMER.COM        
+    """.trimIndent())
     //erwartet Auswahl des Schwierigkeitsgrads
     setLevel()
 
@@ -14,7 +22,7 @@ fun main(){
     //ListExercises()
 
     //startet das Training
-    startBoxingTimer()
+    BoxingTimer.startBoxingTimer()
 
 }
 

@@ -1,5 +1,3 @@
-import kotlin.concurrent.thread
-import kotlin.system.exitProcess
 var selectedLevel = ""
 
 fun printLevel() {
@@ -13,7 +11,7 @@ fun showTrainingPlan() {
     val formattedMinutes = String.format("%02d", totalSeconds / 60)
     val formattedSeconds = String.format("%02d", totalSeconds % 60)
 
-    print("Trainingsplan: ${plan.name}, Gesamtzeit ${formattedMinutes.toBold()}:${formattedSeconds.toBold()} Minuten, Anzahl der Übungen: ${plan.numExercises}")
+    print("Training-Plan: ${plan.name}, \nTotal time ${formattedMinutes.toBold()}:${formattedSeconds.toBold()}".toBold() + " Minutes, \nNumber of Exercises: ${plan.numExercises}".toBold())
 }
 
 fun setLevel() {
@@ -26,10 +24,10 @@ fun setLevel() {
     val selectLevel = readln()?.toInt()
 
     selectedLevel = when(selectLevel) {
-        1 -> "beginner"
-        2 -> "advanced"
-        3 -> "professional"
-        4 -> "demo"
+        1 -> "Beginner"
+        2 -> "Advanced"
+        3 -> "Professional"
+        4 -> "Demo"
         else -> {
             println("Wrong input! Only type 1, 2, 3 or 4")
             setLevel()
