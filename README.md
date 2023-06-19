@@ -1,4 +1,4 @@
-<img "right" width="50" height="50" src="img/syntaxLogo.png" alt="Syntax Institut Logo">
+<img align="right" width="50" height="50" src="img/syntaxLogo.png" alt="Syntax Institut Logo">
 
 ## Batch08 Grundlagen der Programmierung
 
