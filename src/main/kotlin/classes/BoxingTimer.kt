@@ -1,52 +1,66 @@
 package classes
+import Exercise.Companion.listExercises
 import TrainingPlan
-import exercises
-import toBold
-import wrapString
+import TrainingPlan.Companion.showTrainingPlan
+import TrainingPlan.Companion.startTraining
+
+enum class Level {
+        Beginner, Advanced, Professional, Demo
+}
 
 open class BoxingTimer(var trainingPlans: MutableList<TrainingPlan>) {
 
-
-
         companion object {
-                fun startBoxingTimer() {
-                        var totalSeconds = exercises.sumOf { it.rounds * (it.duration + it.pause) }
-                        // Hinzufügen der zusätzlichen Pausen zur Gesamtzeit
-                        totalSeconds += (exercises.size - 1) * 60
 
-                        var remainingTotalSeconds = totalSeconds
+                var selectedLevel = ""
 
-                        fun countdown(timeInSeconds: Int, action: String) {
-                                var timeRemaining = timeInSeconds
-                                while (timeRemaining >= 0) {
-                                        val formattedMinutes = String.format("%02d", remainingTotalSeconds / 60)
-                                        val formattedSeconds = String.format("%02d", remainingTotalSeconds % 60)
-                                        print("\r$action ${String.format("%02d", timeRemaining).toBold() + " seconds".toBold()} - (Total Time ${formattedMinutes.toBold()}:${formattedSeconds.toBold()})")
-                                        Thread.sleep(1000)
-                                        remainingTotalSeconds--
-                                        timeRemaining--
-                                }
-                                println()
-                        }
+                fun setLevel() {
+                        println("\nSelect the level of your training:\n\n" +
+                                "[1] for ${Level.Beginner.toString()}\n" +
+                                "[2] for ${Level.Advanced.toString()}\n" +
+                                "[3] for ${Level.Professional.toString()}\n" +
+                                "[4] for ${Level.Demo.toString()}\n" +
+                                "Type the number: ")
+                        val selectLevel = readln()?.toInt()
 
-                        for ((index, exercise) in exercises.withIndex()) {
-                                println("\n\n${wrapString(exercise.description, 50)}\n")
-                                for (round in 1..exercise.rounds) {
-                                        val action = "${exercise.name}, Round $round of ${exercise.rounds} -"
-                                        countdown(exercise.duration, action)
-                                        if (round < exercise.rounds) {
-                                                val pauseAction = "${exercise.name}, break after round $round -"
-                                                countdown(exercise.pause, pauseAction)
-                                        }
-                                }
-                                if (index < exercises.size - 1) { // Wenn es nicht die letzte Übung ist
-                                        val transitionAction = "The next exercise starts in"
-                                        val exerciseBreak = String.format("%02d",exercise.nextExercise)
-                                        countdown(exerciseBreak.toInt(), transitionAction)
+                        selectedLevel = when(selectLevel) {
+                                1 -> Level.Beginner.toString()
+                                2 -> Level.Advanced.toString()
+                                3 -> Level.Professional.toString()
+                                4 -> Level.Demo.toString()
+                                else -> {
+                                        println("Wrong input! Only type 1, 2, 3 or 4")
+                                        setLevel()
+                                        return
                                 }
                         }
+                }
 
-                        println("\n\nThe training is finished.")
+                fun boxingTimerMenu() {
+                println(
+                        """
+                What would you like to do?
+                [1] $selectedLevel exercises overview?
+                [2] Start your $selectedLevel Boxing Training?
+                
+                Type 1 for overview or 2 to start the Boxing Training!
+            """.trimMargin()
+                )
+                        var menuItem = readln().toInt()
+                        when(menuItem) {
+                                1 -> listExercises() //Listet alle Übungen aus dem Trainingsplan auf
+                                2 -> {
+                                        showTrainingPlan() //Zeigt den Trainingsplan}
+                                        startTraining() //startet das Training
+                                }
+
+                                else -> {
+                                        println("wrong input")
+                                        boxingTimerMenu()
+                                        return
+                                }
+                        }
+
                 }
         }
 
@@ -59,14 +73,5 @@ open class BoxingTimer(var trainingPlans: MutableList<TrainingPlan>) {
 
 
 
-/*
-fun countdown(timeInSeconds: Int) {
-        var timeRemaining = timeInSeconds
 
-        while (timeRemaining >= 0) {
-                print("\rVerbleibende Zeit: ${timeRemaining / 60} Minuten und ${timeRemaining % 60} Sekunden")
-                Thread.sleep(1000)  // Warte für 1 Sekunde
-                timeRemaining--
-        }
-}
-*/
+

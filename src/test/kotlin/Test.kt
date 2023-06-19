@@ -1,4 +1,7 @@
-import Exercise
+
+import Exercise.Companion.setExercises
+import TrainingPlan.Companion.showTrainingPlan
+import classes.BoxingTimer.Companion.setLevel
 
 fun main(){
         //erwartet Auswahl des Schwierigkeitsgrads
