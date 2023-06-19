@@ -36,15 +36,15 @@ open class BoxingTimer {
                 }
 
                 fun boxingTimerMenu() {
-                println(
-                        """
-                What would you like to do?
-                [1] $selectedLevel classes.getExercises overview?
-                [2] Start your $selectedLevel Boxing Training?
-                
-                Type 1 for overview or 2 to start the Boxing Training!
-            """.trimMargin()
-                )
+println(
+        """
+        What would you like to do?
+        [1] $selectedLevel exercises overview?
+        [2] Start your $selectedLevel Boxing Training?
+        
+        Type 1 for overview or 2 to start the Boxing Training!
+        """.trimMargin()
+        )
                         when(readln().toInt()) {
                                 1 -> listExercises() //Lists all exercises from the training plan
                                 2 -> {
