@@ -2,7 +2,7 @@
 import Exercise.Companion.setExercises
 import classes.BoxingTimer.Companion.boxingTimerMenu
 import classes.BoxingTimer.Companion.setLevel
-
+var nextExercise = Int
 
 fun main(){
     //Some Ascii Art with Project Domain as Header

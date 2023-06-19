@@ -1,8 +1,8 @@
 import classes.BoxingTimer
 import classes.BoxingTimer.Companion.boxingTimerMenu
 import classes.exercises.*
-
 val exercises: MutableList<Exercise> = mutableListOf<Exercise>()
+
 open class Exercise(
     var name: String,
     var description: String,
@@ -12,7 +12,11 @@ open class Exercise(
     var level: String,
     var nextExercise: Int
 ) {
+
+
     companion object {
+
+
         fun setExercises() {
             exercises.add(warmUp)
             exercises.add(ropeSkipping)

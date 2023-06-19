@@ -7,21 +7,21 @@ import classes.BoxingTimer
 class CoolDown(level: String) : Exercise(
     name = "Cool-Down",
     description = "The cool-down phase is the final stage of a boxing training session, aimed at gradually reducing the heart rate and relaxing the muscles.",
-    rounds = when(level) {
+    rounds = when(BoxingTimer.selectedLevel) {
         "Beginner" -> 1
         "Advanced" -> 1
         "Professional" -> 1
         "Demo" -> 1
         else -> 1 //Default-Wert
     },
-    duration = when(level) {
+    duration = when(BoxingTimer.selectedLevel) {
         "Beginner" -> 600
         "Advanced" -> 600
         "Professional" -> 600
         "Demo" -> 10
         else -> 10 //Default-Wert
     },
-    pause = when(level) {
+    pause = when(BoxingTimer.selectedLevel) {
         "Beginner" -> 0
         "Advanced" -> 0
         "Professional" -> 0

@@ -1,26 +1,27 @@
 package classes.exercises
 
 import Exercise
+import classes.BoxingTimer
 
 // Erstellen einer spezifischen Klasse für RopeSkipping
 class RopeSkipping(level: String) : Exercise(
     name = "Rope-Skipping",
     description = "Rope Skipping routines are crucial for enhancing speed, agility, and cardio endurance.",
-    rounds = when(level) {
+    rounds = when(BoxingTimer.selectedLevel) {
         "Beginner" -> 3
         "Advanced" -> 3
         "Professional" -> 3
         "Demo" -> 2
         else -> 1 //Default-Wert
     },
-    duration = when(level) {
+    duration = when(BoxingTimer.selectedLevel) {
         "Beginner" -> 60
         "Advanced" -> 90
         "Professional" -> 180
         "Demo" -> 10
         else -> 10 //Default-Wert
     },
-    pause = when(level) {
+    pause = when(BoxingTimer.selectedLevel) {
         "Beginner" -> 60
         "Advanced" -> 60
         "Professional" -> 60
@@ -28,7 +29,7 @@ class RopeSkipping(level: String) : Exercise(
         else -> 5 //Default-Wert
     },
     level = level,
-    nextExercise = when(level) {
+    nextExercise = when(BoxingTimer.selectedLevel) {
         "Beginner" -> 60
         "Advanced" -> 60
         "Professional" -> 60
