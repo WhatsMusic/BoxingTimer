@@ -1,6 +1,6 @@
 
-import Exercise.Companion.setExercises
-import TrainingPlan.Companion.showTrainingPlan
+import classes.Exercise.Companion.setExercises
+import classes.TrainingPlan.Companion.showTrainingPlan
 import classes.BoxingTimer.Companion.setLevel
 
 fun main(){

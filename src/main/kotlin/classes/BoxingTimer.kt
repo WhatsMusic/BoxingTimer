@@ -1,14 +1,13 @@
 package classes
-import Exercise.Companion.listExercises
-import TrainingPlan
-import TrainingPlan.Companion.showTrainingPlan
-import TrainingPlan.Companion.startTraining
+import classes.Exercise.Companion.listExercises
+import classes.TrainingPlan.Companion.showTrainingPlan
+import classes.TrainingPlan.Companion.startTraining
 
 enum class Level {
         Beginner, Advanced, Professional, Demo
 }
 
-open class BoxingTimer(var trainingPlans: MutableList<TrainingPlan>) {
+open class BoxingTimer {
 
         companion object {
 
@@ -16,12 +15,12 @@ open class BoxingTimer(var trainingPlans: MutableList<TrainingPlan>) {
 
                 fun setLevel() {
                         println("\nSelect the level of your training:\n\n" +
-                                "[1] for ${Level.Beginner.toString()}\n" +
-                                "[2] for ${Level.Advanced.toString()}\n" +
-                                "[3] for ${Level.Professional.toString()}\n" +
-                                "[4] for ${Level.Demo.toString()}\n" +
+                                "[1] for ${Level.Beginner}\n" +
+                                "[2] for ${Level.Advanced}\n" +
+                                "[3] for ${Level.Professional}\n" +
+                                "[4] for ${Level.Demo}\n" +
                                 "Type the number: ")
-                        val selectLevel = readln()?.toInt()
+                        val selectLevel = readln().toInt()
 
                         selectedLevel = when(selectLevel) {
                                 1 -> Level.Beginner.toString()
@@ -40,17 +39,16 @@ open class BoxingTimer(var trainingPlans: MutableList<TrainingPlan>) {
                 println(
                         """
                 What would you like to do?
-                [1] $selectedLevel exercises overview?
+                [1] $selectedLevel classes.getExercises overview?
                 [2] Start your $selectedLevel Boxing Training?
                 
                 Type 1 for overview or 2 to start the Boxing Training!
             """.trimMargin()
                 )
-                        var menuItem = readln().toInt()
-                        when(menuItem) {
+                        when(readln().toInt()) {
                                 1 -> listExercises() //Listet alle Übungen aus dem Trainingsplan auf
                                 2 -> {
-                                        showTrainingPlan() //Zeigt den Trainingsplan}
+                                        showTrainingPlan() //Zeigt den Trainingsplan
                                         startTraining() //startet das Training
                                 }
 

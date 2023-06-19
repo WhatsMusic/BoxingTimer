@@ -1,7 +1,7 @@
 package classes.exercises
 
-import Exercise
 import classes.BoxingTimer
+import classes.Exercise
 
 // Erstellen einer spezifischen Klasse für Cool-Down
 class CoolDown(level: String) : Exercise(

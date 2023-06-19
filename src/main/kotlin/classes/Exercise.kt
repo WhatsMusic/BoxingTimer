@@ -1,7 +1,9 @@
-import classes.BoxingTimer
+package classes
 import classes.BoxingTimer.Companion.boxingTimerMenu
 import classes.exercises.*
-val exercises: MutableList<Exercise> = mutableListOf<Exercise>()
+import toBold
+import wrapString
+val exercises = mutableListOf<Exercise>()
 
 open class Exercise(
     var name: String,
@@ -47,7 +49,9 @@ open class Exercise(
     }
 }
 
-    // Erstellung der Objekte
+
+
+// Erstellung der Objekte
     val warmUp = WarmUp(BoxingTimer.selectedLevel)
     val ropeSkipping = RopeSkipping(BoxingTimer.selectedLevel)
     val shadowBoxing = ShadowBoxing(BoxingTimer.selectedLevel)

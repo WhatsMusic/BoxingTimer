@@ -1,4 +1,4 @@
-<img align="right" width="50" height="50" src="img/syntaxLogo.png">
+<img "right" width="50" height="50" src="img/syntaxLogo.png" alt="Syntax Institut Logo">
 
 ## Batch08 Grundlagen der Programmierung
 
@@ -8,65 +8,65 @@
 
 # BoxingTimer Class
 
-`BoxingTimer` is an open class used for organizing and controlling a boxing training program. It holds a list of `TrainingPlan` objects, each representing an individual training plan. Each `TrainingPlan` contains a list of `Exercise` objects, representing specific exercises within that training.
+`BoxingTimer` is an open class used for organizing and controlling a boxing training program. It holds a list of `classes.TrainingPlan` objects, each representing an individual training classes.getPlan. Each `classes.TrainingPlan` contains a list of `classes.Exercise` objects, representing specific classes.getExercises within that training.
 
 ## Properties
 
-- `trainingPlans`: A list of `TrainingPlan` objects.
+- `trainingPlans`: A list of `classes.TrainingPlan` objects.
 
 ## Methods
 
 - `setLevel()`: This method asks the user to select what level of training they would like to do and stores this information in the `selectedLevel` variable. This method is static and belongs to the companion object of the class.
 
-- `boxingTimerMenu()`: This method displays a menu for the user to choose whether they want to see an overview of the exercises at their selected level, or whether they want to start their training. This method is also static and belongs to the companion object of the class.
+- `boxingTimerMenu()`: This method displays a menu for the user to choose whether they want to see an overview of the classes.getExercises at their selected level, or whether they want to start their training. This method is also static and belongs to the companion object of the class.
 
 ## Companion Object
 
 - The `companion object` contains static methods and properties that can be used independently of specific instances of `BoxingTimer`. The companion object contains the static `setLevel()` method which asks the user for their desired training level and stores the answer, and the static `boxingTimerMenu()` method which displays a menu and responds to user input.
 
-The methods `listExercises()`, `showTrainingPlan()`, and `startTraining()` are called from the companion objects of the `Exercise` and `TrainingPlan` classes, suggesting that these classes are closely linked and work together to carry out the training plans.
+The methods `listExercises()`, `showTrainingPlan()`, and `startTraining()` are called from the companion objects of the `classes.Exercise` and `classes.TrainingPlan` classes, suggesting that these classes are closely linked and work together to carry out the training plans.
 
 Note that `selectedLevel` is stored within the `companion object` declaration, which means it is shared between different instances of `BoxingTimer`. If you want to use different `BoxingTimer` instances with different levels, you should store `selectedLevel` as a non-static property in the main class.
 
-# TrainingPlan Class
+# classes.TrainingPlan Class
 
-`TrainingPlan` is a class used for managing individual training plans within a boxing training program.
+`classes.TrainingPlan` is a class used for managing individual training plans within a boxing training program.
 
 ## Properties
 
-- `name`: A string representing the name of the training plan.
-- `exercises`: A list of `Exercise` objects, each representing a specific exercise within the training plan.
-- `level`: A string representing the level of the training plan.
-- `totalDuration`: An integer representing the total duration of all exercises in the training plan, in seconds.
+- `name`: A string representing the name of the training classes.getPlan.
+- `classes.getExercises`: A list of `classes.Exercise` objects, each representing a specific exercise within the training classes.getPlan.
+- `level`: A string representing the level of the training classes.getPlan.
+- `totalDuration`: An integer representing the total duration of all classes.getExercises in the training classes.getPlan, in seconds.
 - `minutes`: An integer representing the number of minutes in `totalDuration`.
 - `seconds`: An integer representing the remaining number of seconds in `totalDuration` after `minutes` have been subtracted.
-- `numExercises`: An integer representing the number of exercises in the training plan.
+- `numExercises`: An integer representing the number of classes.getExercises in the training classes.getPlan.
 
 ## Methods
 
-- `startTraining()`: This method controls the execution of the training plan. It loops through each exercise in the plan, and each round within the exercise, and performs a countdown for each one. After each exercise (except for the last one), it also performs a countdown for a break period. This method is static and belongs to the companion object of the class.
+- `startTraining()`: This method controls the execution of the training classes.getPlan. It loops through each exercise in the classes.getPlan, and each round within the exercise, and performs a countdown for each one. After each exercise (except for the last one), it also performs a countdown for a break period. This method is static and belongs to the companion object of the class.
 
-- `showTrainingPlan()`: This method prints a summary of the training plan, including its name, total duration, and number of exercises. This method is also static and belongs to the companion object of the class.
+- `showTrainingPlan()`: This method prints a summary of the training classes.getPlan, including its name, total duration, and number of classes.getExercises. This method is also static and belongs to the companion object of the class.
 
 ## Companion Object
 
-- The `companion object` contains static methods that can be used independently of specific instances of `TrainingPlan`. The companion object contains the static `startTraining()` method which controls the execution of the training plan, and the static `showTrainingPlan()` method which prints a summary of the training plan.
+- The `companion object` contains static methods that can be used independently of specific instances of `classes.TrainingPlan`. The companion object contains the static `startTraining()` method which controls the execution of the training classes.getPlan, and the static `showTrainingPlan()` method which prints a summary of the training classes.getPlan.
 
 ## Usage
 
-You can create an instance of `TrainingPlan` by providing the name, a list of exercises, and the level. The `name` and `level` can be obtained from the `selectedLevel` property of the `BoxingTimer` class.
+You can create an instance of `classes.TrainingPlan` by providing the name, a list of classes.getExercises, and the level. The `name` and `level` can be obtained from the `selectedLevel` property of the `BoxingTimer` class.
 
 ```kotlin
-val plan = TrainingPlan(
+val classes.getPlan = classes.TrainingPlan(
     name = BoxingTimer.selectedLevel,
-    exercises = exercises,
+    classes.getExercises = classes.getExercises,
     level = BoxingTimer.selectedLevel
 )
 ```
 
-# Exercise Class
+# classes.Exercise Class
 
-`Exercise` is a class used for managing individual exercises within a boxing training program.
+`classes.Exercise` is a class used for managing individual classes.getExercises within a boxing training program.
 
 ## Properties
 
@@ -80,33 +80,33 @@ val plan = TrainingPlan(
 
 ## Methods
 
-- `setExercises()`: This method adds predefined exercises to the `exercises` list. This method is static and belongs to the companion object of the class.
+- `setExercises()`: This method adds predefined classes.getExercises to the `classes.getExercises` list. This method is static and belongs to the companion object of the class.
 
-- `listExercises()`: This method prints a list of all exercises. This method is also static and belongs to the companion object of the class.
+- `listExercises()`: This method prints a list of all classes.getExercises. This method is also static and belongs to the companion object of the class.
 
 ## Companion Object
 
-- The `companion object` contains static methods that can be used independently of specific instances of `Exercise`. The companion object contains the static `setExercises()` method which adds predefined exercises to the `exercises` list, and the static `listExercises()` method which prints a list of all exercises.
+- The `companion object` contains static methods that can be used independently of specific instances of `classes.Exercise`. The companion object contains the static `setExercises()` method which adds predefined classes.getExercises to the `classes.getExercises` list, and the static `listExercises()` method which prints a list of all classes.getExercises.
 
 ## Usage
 
-You can create an instance of `Exercise` by providing the name, description, number of rounds, duration of each round, duration of the pause after each round, level of the exercise, and the time until the start of the next exercise.
+You can create an instance of `classes.Exercise` by providing the name, description, number of rounds, duration of each round, duration of the pause after each round, level of the exercise, and the time until the start of the next exercise.
 
 ```kotlin
-val warmUp = WarmUp(BoxingTimer.selectedLevel)
-val ropeSkipping = RopeSkipping(BoxingTimer.selectedLevel)
-val shadowBoxing = ShadowBoxing(BoxingTimer.selectedLevel)
-val sparring = Sparring(BoxingTimer.selectedLevel)
-val coolDown = CoolDown(BoxingTimer.selectedLevel)
+val classes.getWarmUp = WarmUp(BoxingTimer.selectedLevel)
+val classes.getRopeSkipping = RopeSkipping(BoxingTimer.selectedLevel)
+val classes.getShadowBoxing = ShadowBoxing(BoxingTimer.selectedLevel)
+val classes.getSparring = Sparring(BoxingTimer.selectedLevel)
+val classes.getCoolDown = CoolDown(BoxingTimer.selectedLevel)
 ```
 
 # WarmUp Class
 
-`WarmUp` is a subclass of `Exercise`, which is specifically tailored for warm-up exercises.
+`WarmUp` is a subclass of `classes.Exercise`, which is specifically tailored for warm-up classes.getExercises.
 
 ## Properties
 
-The properties of `WarmUp` are the same as those of the `Exercise` class, including `name`, `description`, `rounds`, `duration`, `pause`, `level`, and `nextExercise`. The values for these properties are set when creating an instance of the `WarmUp` class based on the selected level, which is an argument provided when creating the instance.
+The properties of `WarmUp` are the same as those of the `classes.Exercise` class, including `name`, `description`, `rounds`, `duration`, `pause`, `level`, and `nextExercise`. The values for these properties are set when creating an instance of the `WarmUp` class based on the selected level, which is an argument provided when creating the instance.
 
 ## Constructors
 
@@ -123,16 +123,16 @@ The `WarmUp` class has a single constructor that accepts a `level` parameter. Th
 You can create an instance of `WarmUp` by providing the level as an argument:
 
 ```kotlin
-val warmUp = WarmUp(BoxingTimer.selectedLevel)
+val classes.getWarmUp = WarmUp(BoxingTimer.selectedLevel)
 ```
 
 # RopeSkipping Class
 
-`RopeSkipping` is a subclass of `Exercise`, specifically tailored for rope skipping exercises.
+`RopeSkipping` is a subclass of `classes.Exercise`, specifically tailored for rope skipping classes.getExercises.
 
 ## Properties
 
-The properties of `RopeSkipping` are the same as those of the `Exercise` class, including `name`, `description`, `rounds`, `duration`, `pause`, `level`, and `nextExercise`. The values for these properties are set based on the selected level when creating an instance of the `RopeSkipping` class.
+The properties of `RopeSkipping` are the same as those of the `classes.Exercise` class, including `name`, `description`, `rounds`, `duration`, `pause`, `level`, and `nextExercise`. The values for these properties are set based on the selected level when creating an instance of the `RopeSkipping` class.
 
 ## Constructors
 
@@ -149,16 +149,16 @@ The `RopeSkipping` class has a single constructor that accepts a `level` paramet
 You can create an instance of `RopeSkipping` by providing the level as an argument:
 
 ```kotlin
-val ropeSkipping = RopeSkipping(level)
+val classes.getRopeSkipping = RopeSkipping(level)
 ```
 
 # ShadowBoxing Class
 
-`ShadowBoxing` is a subclass of `Exercise`, specifically designed for shadow boxing exercises.
+`ShadowBoxing` is a subclass of `classes.Exercise`, specifically designed for shadow-boxing classes.getExercises.
 
 ## Properties
 
-The properties of `ShadowBoxing` are the same as those of the `Exercise` class, including `name`, `description`, `rounds`, `duration`, `pause`, `level`, and `nextExercise`. The values for these properties are set based on the selected level when creating an instance of the `ShadowBoxing` class.
+The properties of `ShadowBoxing` are the same as those of the `classes.Exercise` class, including `name`, `description`, `rounds`, `duration`, `pause`, `level`, and `nextExercise`. The values for these properties are set based on the selected level when creating an instance of the `ShadowBoxing` class.
 
 ## Constructors
 
@@ -175,16 +175,16 @@ The `ShadowBoxing` class has a single constructor that accepts a `level` paramet
 You can create an instance of `ShadowBoxing` by providing the level as an argument:
 
 ```kotlin
-val shadowBoxing = ShadowBoxing(level)
+val classes.getShadowBoxing = ShadowBoxing(level)
 ```
 
 # Sparring Class
 
-`Sparring` is a subclass of `Exercise`, specifically designed for sparring exercises.
+`Sparring` is a subclass of `classes.Exercise`, specifically designed for classes.getSparring classes.getExercises.
 
 ## Properties
 
-The properties of `Sparring` are the same as those of the `Exercise` class, including `name`, `description`, `rounds`, `duration`, `pause`, `level`, and `nextExercise`. The values for these properties are set based on the selected level when creating an instance of the `Sparring` class.
+The properties of `Sparring` are the same as those of the `classes.Exercise` class, including `name`, `description`, `rounds`, `duration`, `pause`, `level`, and `nextExercise`. The values for these properties are set based on the selected level when creating an instance of the `Sparring` class.
 
 ## Constructors
 
@@ -201,16 +201,16 @@ The `Sparring` class has a single constructor that accepts a `level` parameter. 
 You can create an instance of `Sparring` by providing the level as an argument:
 
 ```kotlin
-val sparring = Sparring(level)
+val classes.getSparring = Sparring(level)
 ```
 
 # CoolDown Class
 
-`CoolDown` is a subclass of `Exercise`, specifically designed for cool-down exercises.
+`CoolDown` is a subclass of `classes.Exercise`, specifically designed for cool-down classes.getExercises.
 
 ## Properties
 
-The properties of `CoolDown` are the same as those of the `Exercise` class, including `name`, `description`, `rounds`, `duration`, `pause`, `level`, and `nextExercise`. The values for these properties are set based on the selected level when creating an instance of the `CoolDown` class.
+The properties of `CoolDown` are the same as those of the `classes.Exercise` class, including `name`, `description`, `rounds`, `duration`, `pause`, `level`, and `nextExercise`. The values for these properties are set based on the selected level when creating an instance of the `CoolDown` class.
 
 ## Constructors
 
@@ -227,7 +227,7 @@ The `CoolDown` class has a single constructor that accepts a `level` parameter. 
 You can create an instance of `CoolDown` by providing the level as an argument:
 
 ```kotlin
-val coolDown = CoolDown(level)
+val classes.getCoolDown = CoolDown(level)
 ```
 
 `The classes description is generated with ChatGPT`

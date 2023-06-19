@@ -1,6 +1,6 @@
 package classes.exercises
 
-import Exercise
+import classes.Exercise
 import classes.BoxingTimer
 
 // Erstellen einer spezifischen Klasse für Warm-Up
