@@ -230,4 +230,6 @@ You can create an instance of `CoolDown` by providing the level as an argument:
 val coolDown = CoolDown(level)
 ```
 
+`The classes description is generated with ChatGPT`
+
 
