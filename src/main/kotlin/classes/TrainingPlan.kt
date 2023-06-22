@@ -14,9 +14,6 @@ import wrapString
 
         fun startTraining() {
             val totalSeconds = exercises.sumOf { (it.rounds * (it.duration + it.pause) + it.nextExercise) }
-            // Adding the additional pauses to the total time.
-
-            //totalSeconds += (classes.getExercises.size - 1)
 
             var remainingTotalSeconds = totalSeconds
 
